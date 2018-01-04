@@ -1,4 +1,4 @@
-/* VER 1.1
+/* VER 1.2
 The code combining all tags in one tabe with colums:
 SYS SUBSYS ITEM SERVICE CONSTRUCTION PRECOMMISSIONING PASSPORTS
 The databases from Easy Plant:
@@ -42,8 +42,7 @@ SELECT
             AND ((ec.WC) Not Like "16215")
             AND ((ec.WC) Not Like "16313")
             AND ((ec.WC) Not Like "16314")
-;
-UNION ALL
+UNION
 SELECT
     eco.TITLE_OBJECT,
     eco.MARKA,
@@ -73,8 +72,7 @@ SELECT
             AND ((eco.WC) Not Like "16215")
             AND ((eco.WC) Not Like "16313")
             AND ((eco.WC) Not Like "16314")
-            ;
-UNION ALL
+UNION
 SELECT
     em.TITLE_OBJECT,
     em.MARKA,
@@ -103,8 +101,8 @@ SELECT
             AND ((em.WC) Not Like "16214")
             AND ((em.WC) Not Like "16215")
             AND ((em.WC) Not Like "16313")
-            AND ((em.WC) Not Like "16314");
-UNION ALL
+            AND ((em.WC) Not Like "16314")
+UNION
 SELECT
     i.TITLE_OBJECT,
     i.MARKA,
@@ -134,8 +132,7 @@ SELECT
             AND ((i.WC) Not Like "16215")
             AND ((i.WC) Not Like "16313")
             AND ((i.WC) Not Like "16314")
-;
-UNION ALL
+UNION
 SELECT
     ic.TITLE_OBJECT,
     ic.MARKA,
@@ -164,8 +161,8 @@ SELECT
             AND ((ic.WC) Not Like "16214")
             AND ((ic.WC) Not Like "16215")
             AND ((ic.WC) Not Like "16313")
-            AND ((ic.WC) Not Like "16314");
-UNION ALL
+            AND ((ic.WC) Not Like "16314")
+UNION
 SELECT
     ico.TITLE_OBJECT,
     ico.MARKA,
@@ -194,5 +191,4 @@ SELECT
             AND ((ico.WC) Not Like "16214")
             AND ((ico.WC) Not Like "16215")
             AND ((ico.WC) Not Like "16313")
-            AND ((ico.WC) Not Like "16314")
-;
+            AND ((ico.WC) Not Like "16314");
