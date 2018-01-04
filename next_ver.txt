@@ -1,0 +1,9 @@
+#001
+HO dashboard:
+  - connect all HOs with subsystems
+  - add russian and english subsystems description
+#002
+  - clean up grab numbers: not 3300-% with -D%
+  - for all drawings match title-marka if in the matrix
+  - for all areas match titles
+#003

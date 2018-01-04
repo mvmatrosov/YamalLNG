@@ -1,0 +1,242 @@
+/*HO-004 just collect tags for specific subsysytems:
+000-ET-EL-U00
+000-ET-EL-U01
+000-HT-EL-002
+000-JB-IN-002
+000-LT-EL-002
+000-LV-EL-002
+050-BL-001-05
+050-CT-EL-U02
+050-CT-IN-U02
+050-ET-EL-U02
+050-SE-S-U02
+050-ST-M-U02
+050-U-001
+050-U-002
+050-U-004
+050-U-005
+050-U-006
+050-U-007
+050-U-008
+050-U-009
+050-U-063-01
+050-U-070-01
+050-U-070-02
+050-U-071
+050-U-079-01
+050-U-102*/
+SELECT
+    ec.CABLE,
+    ec.TITLE_OBJECT,
+    ec.MARKA,
+    ec.SUBSYS,
+    ec.DWG,
+    'ELECTRICAL CABLES' as Data
+    FROM elecab ec
+      WHERE ec.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102')
+UNION
+SELECT
+    eo.ITEM,
+    eo.TITLE_OBJECT,
+    eo.MARKA,
+    eo.SUBSYS,
+    eo.DWG,
+    'ELECTRICAL COMPONENTS' as Data
+    FROM elecom eo
+      WHERE eo.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102')
+UNION
+SELECT
+    em.ITEM,
+    em.TITLE_OBJECT,
+    em.MARKA,
+    em.SUBSYS,
+    em.PID,
+    'MOTORS' as Data
+    FROM elemoto em
+      WHERE em.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102')
+UNION
+SELECT
+    ii.TAG_NUMBER,
+    ii.TITLE_OBJECT,
+    ii.MARKA,
+    ii.SUBSYS,
+    ii.PID,
+    'INSTRUMENTS' as Data
+    FROM ins ii
+      WHERE ii.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102')
+UNION
+SELECT
+    ic.CABLE,
+    ic.TITLE_OBJECT,
+    ic.MARKA,
+    ic.SUBSYS,
+    ic.DWG,
+    'INSTRUMENT CABLES' as Data
+    FROM inscab ic
+      WHERE ic.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102')
+UNION
+SELECT
+    io.TAG,
+    io.TITLE_OBJECT,
+    io.MARKA,
+    io.SUBSYS,
+    io.DWG,
+    'INSTRUMENTATION COMPONENTS' as Data
+    FROM inscom io
+      WHERE io.SUBSYS IN (
+        '000-ET-EL-U00',
+        '000-ET-EL-U01',
+        '000-HT-EL-002',
+        '000-JB-IN-002',
+        '000-LT-EL-002',
+        '000-LV-EL-002',
+        '050-BL-001-05',
+        '050-CT-EL-U02',
+        '050-CT-IN-U02',
+        '050-ET-EL-U02',
+        '050-SE-S-U02',
+        '050-ST-M-U02',
+        '050-U-001',
+        '050-U-002',
+        '050-U-004',
+        '050-U-005',
+        '050-U-006',
+        '050-U-007',
+        '050-U-008',
+        '050-U-009',
+        '050-U-063-01',
+        '050-U-070-01',
+        '050-U-070-02',
+        '050-U-071',
+        '050-U-079-01',
+        '050-U-102');
